@@ -4,19 +4,8 @@
 
 https://www.kaggle.com/competitions/uplift-shift-23
 
-This branch is an attempt to leverage neural networks to use time-dependent data (purchase history). 
+### Status: ABANDONED
 
-Time dependent and time-independent data have different dimensions so I used the functional API of keras.
-
-The sklift library was not used as it requires base estimators with sklearn API. I used manual class transformation instead.
-
-The first attempt was not successful: validation roc_auc ~ 0.5, without improvement during training.
-
-Notebooks:
-- data_prep: data preparation
-- adversarial_validation: checking various splits for proper stratification
-- 01_deep_learn: model training
-
-
+This branch was an attempt to use keras as a base estimator in sklift, by wrapping a keras model in SciKeras, but I found that SciKeras apparently does not work with input data of different shapes (time-dependent and time-independent data).
 
 
